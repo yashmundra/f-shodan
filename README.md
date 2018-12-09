@@ -1,18 +1,18 @@
 # F-Shodan (Available at fshodan.com)
 
-This projects is search engine which maintains a database consisting of ports, banners and ip address for the entire ipv4 address space(about 200 million database entries). It allows indexing using either ip or banner substring or port.
+This project is a search engine which maintains a database consisting of port, banner and ip information for the entire ipv4 address space(about 200 million database entries). It allows indexing using either ip or banner substring or port number.
 
 ## Getting Started
 
-Using the site is intuitive. If you would like to host your own or make modifications, script.sh will setup the environment including installing mysql,apache and scanning th einternet and indexing everything. Some required mysql commands are given below.
+Using the site is intuitive. If you would like to host your own or make modifications, script.sh will setup the required software environment including installing mysql,apache and scanning th einternet and indexing everything. Some required mysql commands are given below.
 
 ### Prerequisites
 
-Installation of these are covered in the script.sh file but the prerequisites include masscan,mysql,apache and bootstrap.
+Installation of these are covered in the script.sh file but the prerequisites include masscan,mysql,apache and bootstrap. You will also need access to some m5d.large EC2 instances for about 3 hours. Exact time differs based on network characteristics and how many instances are used.
 
 ### Mysql 
 
-We can use the local data load functionality to load our scanning info into the mysql database.
+We can use the local data load functionality to load our scanning info into the mysql database. We drop the default user and create a new one to connect better with the php page and avoid default config. 
 
 ```
 DROP USER 'root'@'localhost';
@@ -30,13 +30,6 @@ load data local infile '/home/ubuntu/b1.csv' into table results fields terminate
 ## Should look something like this
 
 ![alt text](https://github.com/yashmundra/f-shodan/blob/master/result2.JPG)
-
-
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 
 
 
