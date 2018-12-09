@@ -29,7 +29,7 @@ load data local infile '/home/ubuntu/b1.csv' into table results fields terminate
 
 ## Should look something like this
 
-![alt text](https://raw.githubusercontent.com/yashmundra/f-shodan/blob/master/result2.JPG)
+![alt text](https://github.com/yashmundra/f-shodan/blob/master/result2.JPG)
 
 
 
